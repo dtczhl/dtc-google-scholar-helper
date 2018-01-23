@@ -1,17 +1,41 @@
+
+var dtcGoogleCitationVariables = {
+	pathTodtcGoogleCitationHelperPhp: 'google-citation-helper/dtcGoogleCitationHelper.php',
+	paperTitleClass: "dtcGooglePaperTitle",
+	paperCitationCountClass: "dtcGoogleCicationCount"
+};
+
 function dtcGoogleCitationCount(scholarUrl){
 	
 	var paperCitationCountArray = {};
 	
+	
 	$.ajax({
 		type: 'POST',
-		url: 'google-citation-helper/dtcGoogleCitationHelper.php',
+		url: dtcGoogleCitationVariables['pathTodtcGoogleCitationHelperPhp'],
 		data: 'scholarUrl=' + scholarUrl,
 		dataType: 'json',
 		cache: false,
 		success: function(data){
-			console.log(data);
-			console.log(data["when pipelines meet fountain: fast data dissemination in wireless sensor networks"]);
+			
+			var $paperTitles = $("." + dtcGoogleCitationVariables["paperTitleClass"]);
+			var $paperCitationCount = $("." + dtcGoogleCitationVariables["paperCitationCountClass"]);
+			
+			for (var i = 0; i < $paperTitles.length; i++){
+				var paperTitle = $paperTitles[i].innerText;
+				
+				paperTitle = paperTitle.replace(/\W/g, '').toLowerCase();
+				console.log(paperTitle);
+				if (data[paperTitle] != ''){
+					$paperCitationCount[i].innerText = data[paperTitle];
+				} else {
+					$paperCitationCount[i].innerText = "0";
+				}
+			}
+			
 		}
 	});
+	
+	
 }
 	

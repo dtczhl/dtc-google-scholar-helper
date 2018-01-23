@@ -31,7 +31,10 @@
 		if ($firstIndex == FALSE) break;
 		$scholarHtml = substr($scholarHtml, $firstIndex+strlen($paperTitleStartSymbol));
 		$lastIndex = strpos($scholarHtml, $paperTitleEndSymbol);
-		$paperTitle = trim(strtolower(substr($scholarHtml, 0, $lastIndex)), ".,");
+		
+		$paperTitle = preg_replace("/[\W]+/", "", substr($scholarHtml, 0, $lastIndex));
+		$paperTitle = strtolower($paperTitle);
+		
 		$scholarHtml = substr($scholarHtml, $lastIndex + strlen($paperTitleEndSymbol));
 		
 		$firstIndex = strpos($scholarHtml, $paperCitationStartSymbol);
@@ -44,5 +47,7 @@
 	}
 	
 	echo json_encode($paperCitationCountArray);
+
+
 
 ?>
