@@ -2,7 +2,7 @@
 
 Google scholar provides citation information for your published papers. 
 
-I create this repo so that your paper citation count can be easily add to your website
+I create this repo so that the citation count of your each paper can be easily add to your website
 
 You can go to my publication page to see the effect 
 
