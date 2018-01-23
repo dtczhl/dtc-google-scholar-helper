@@ -52,4 +52,4 @@ and somewhere
 
 ​	```<anytag class="dtcGoogleCicationCount"> </anytag>```
 
-That's all you need to do. The text (`innerText`) will change to 9
+That's all you need to do. The text (i.e., `innerText`) of the `anytag` will change to 9
