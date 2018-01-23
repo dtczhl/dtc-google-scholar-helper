@@ -1,12 +1,17 @@
-$(function(){
+function dtcGoogleCitationCount(scholarUrl){
 	
-	var myFile;
+	var paperCitationCountArray = {};
 	
 	$.ajax({
-		url: 'https://scholar.google.com/citations?user=Xm4NYnsAAAAJ&hl=en', 
+		type: 'POST',
+		url: 'google-citation-helper/dtcGoogleCitationHelper.php',
+		data: 'scholarUrl=' + scholarUrl,
+		dataType: 'json',
+		cache: false,
 		success: function(data){
-			myFile = data;
+			console.log(data);
+			console.log(data["when pipelines meet fountain: fast data dissemination in wireless sensor networks"]);
 		}
 	});
+}
 	
-});
