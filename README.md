@@ -22,11 +22,11 @@ http://huanlezhang.com/publications.php
 
    ​	`<script src="js/jquery-3.2.1.js"></script>`
 
-3. Replace the URL to your google scholar URL. Put following code before `</body>` tag
+3. Replace the URL to your Google Scholar URL. Put following code before `</body>` tag
 
    ```
    <script>
-   	dtcGoogleCitationCount('your url here');
+   	dtcGoogleCitationCount('your Google Scholar URL here');
    </script>
    ```
 
@@ -36,7 +36,7 @@ http://huanlezhang.com/publications.php
 
 ## Note
 
-* You need to check the paper title in your google scholar and the paper title in your website. I have made paper titles into lowercase alphabetical only. For example, if your paper title in Google Scholar is `Hi, you! How are you???`, it converts into `hiyouhowareyou`. In your website, your paper will get matched no matter it is `hi, you how are You`, or `HI~YOU~How   are   you?!?!`. You know what I mean.
+* You need to check the paper title in your google scholar and the paper title in your website. I have made paper titles into lowercase alphabetical only. For example, if your paper title in Google Scholar is `Hi, you! How are you???`, it converts into `hiyouhowareyou`. On your website, your paper will get matched no matter it is `hi, you how are You`, or `HI~YOU~How   are   you?!?!`. You know what I mean :)
 
 
 
@@ -46,7 +46,7 @@ Let's say you have a paper titled "This is an awesome paper" with citation count
 
 In your website php file, 
 
-​	``` <sometag class="dtcGooglePaperTitle"> THIS IS AN AWESOME PAPER </sometag> ```
+​	``` <sometag class="dtcGooglePaperTitle"> ThiS IS aN awesOME PAPER </sometag> ```
 
 and somewhere 
 

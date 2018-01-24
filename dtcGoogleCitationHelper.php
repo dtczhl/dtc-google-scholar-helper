@@ -1,5 +1,11 @@
 <?php
 
+	/* 
+		Huanle Zhang at UC Davis
+		www.huanlezhang.com
+	
+	*/
+
 	header('Content-type: application/json');
 	
 	if ( isset($_POST['scholarUrl'])){
@@ -47,7 +53,4 @@
 	}
 	
 	echo json_encode($paperCitationCountArray);
-
-
-
 ?>

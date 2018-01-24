@@ -1,3 +1,12 @@
+/* 
+
+	Huanle Zhang at UC Davis
+	www.huanlezhang.com
+	
+	
+	pathTodtcGoogleCitationHelperPhp: path to the PHP file
+	
+*/
 
 var dtcGoogleCitationVariables = {
 	pathTodtcGoogleCitationHelperPhp: 'google-citation-helper/dtcGoogleCitationHelper.php',
@@ -8,7 +17,6 @@ var dtcGoogleCitationVariables = {
 function dtcGoogleCitationCount(scholarUrl){
 	
 	var paperCitationCountArray = {};
-	
 	
 	$.ajax({
 		type: 'POST',
@@ -25,7 +33,6 @@ function dtcGoogleCitationCount(scholarUrl){
 				var paperTitle = $paperTitles[i].innerText;
 				
 				paperTitle = paperTitle.replace(/\W/g, '').toLowerCase();
-				console.log(paperTitle);
 				if (data[paperTitle] != ''){
 					$paperCitationCount[i].innerText = data[paperTitle];
 				} else {
@@ -35,7 +42,5 @@ function dtcGoogleCitationCount(scholarUrl){
 			
 		}
 	});
-	
-	
 }
 	
