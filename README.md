@@ -52,6 +52,6 @@ In your website php file,
 
 and somewhere  you want to show the citation count for the paper
 
-​	```<tag2 class="dtcGoogleCicationCount"> </tag2>```
+​	```<tag2 class="dtcGoogleCitationCount"> </tag2>```
 
 `tag1` and `tag2` can be any HTML tags, such as `div`, `p`, `span`, etc.  That's all you need to do. The text (i.e., `innerText`) of the `tag2` will change to 9
