@@ -11,7 +11,7 @@
 var dtcGoogleCitationVariables = {
 	pathTodtcGoogleCitationHelperPhp: 'google-citation-helper/dtcGoogleCitationHelper.php',
 	paperTitleClass: "dtcGooglePaperTitle",
-	paperCitationCountClass: "dtcGoogleCicationCount"
+	paperCitationCountClass: "dtcGoogleCitationCount"
 };
 
 function dtcGoogleCitationCount(scholarUrl){
@@ -28,6 +28,13 @@ function dtcGoogleCitationCount(scholarUrl){
 			
 			var $paperTitles = $("." + dtcGoogleCitationVariables["paperTitleClass"]);
 			var $paperCitationCount = $("." + dtcGoogleCitationVariables["paperCitationCountClass"]);
+			// some checks
+			if ($paperTitles.length == 0){
+				console.log("*** dtcGoogleCitationHelper: " + "No paper title found!");
+			}
+			if ($paperCitationCount == 0){
+				console.log("*** dtcGoogleCitationHelper: " + "No paper count tags found!");
+			}
 			
 			for (var i = 0; i < $paperTitles.length; i++){
 				var paperTitle = $paperTitles[i].innerText;
