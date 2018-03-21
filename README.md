@@ -40,7 +40,7 @@ http://huanlezhang.com/publications.php
 
 * You need to check the paper title in your Google Scholar and the paper title in your website. I have made paper titles into lowercase alphabetical only. For example, if your paper title in Google Scholar is `Hi, I am an awesome paper`, it converts into `hiiamanawesomepaper`. On your website, your paper will get matched no matter it is `hi, I AM AN aweSOME PAper`, or `HI?    Iam an awesome paper?`. You know what I mean :)
 
-* !!! IMPORTANT: Google Scholar website now blocks web requests without SSL certificates. My personal website still works, but my default local web server fail to work.
+* **!!! IMPORTANT**: Google Scholar website now blocks web requests without SSL certificates. My personal website still works, but my default local web server fails to work. Try to install SSL and see if it works (untested yet).
 
 
 
