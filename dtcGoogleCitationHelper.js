@@ -9,7 +9,7 @@
 */
 
 var dtcGoogleCitationVariables = {
-	pathTodtcGoogleCitationHelperPhp: 'google-citation-helper/dtcGoogleCitationHelper.php',
+	pathTodtcGoogleCitationHelperPhp: 'dtc-google-citation-helper/dtcGoogleCitationHelper.php',
 	paperTitleClass: "dtcGooglePaperTitle",
 	paperCitationCountClass: "dtcGoogleCitationCount"
 };

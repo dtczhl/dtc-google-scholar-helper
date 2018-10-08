@@ -1,4 +1,4 @@
-# google-citation-helper
+# dtc-google-citation-helper
 
 Google scholar provides citation information for your published papers. 
 
@@ -10,13 +10,13 @@ http://huanlezhang.com/publications.php
 
 ## How to Use 
 
-1. Move google-citation-helper folder to the home directory of your website
+1. Move dtc-google-citation-helper folder to the home directory of your website
 
    If you want to move my folder to other places, you need to change `pathToDtcGoogleCitationHelperPhp` in `dtcGoogleCitationHelper.js` to point to `dtcGoogleCitationHelper.php` file. 
 
 2. In your php file, include my script by  
 
-   `<script src="google-citation-helper/dtcGoogleCitationHelper.js"></script>`
+   `<script src="dtc-google-citation-helper/dtcGoogleCitationHelper.js"></script>`
 
    Also make sure you have jQuery included before my script, mine is using 
 
@@ -39,10 +39,6 @@ http://huanlezhang.com/publications.php
 ## Note
 
 * You need to check the paper title in your Google Scholar and the paper title in your website. I have made paper titles into lowercase alphabetical only. For example, if your paper title in Google Scholar is `Hi, I am an awesome paper`, it converts into `hiiamanawesomepaper`. On your website, your paper will get matched no matter it is `hi, I AM AN aweSOME PAper`, or `HI?    Iam an awesome paper?`. You know what I mean :)
-
-* **!!! IMPORTANT**: Google Scholar website now blocks web requests without SSL certificates. My personal website still works, but my default local web server fails to work. Try to install SSL and see if it works (untested yet).
-
-
 
 ## Example
 
