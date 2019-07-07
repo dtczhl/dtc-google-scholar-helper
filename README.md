@@ -1,55 +1,51 @@
-# dtc-google-citation-helper
+# dtc-google-scholar-helper
 
-Google scholar provides citation information for your published papers. 
+Google scholar provides useful information for e.g, citations for your papers.
 
-I create this repo so that the citation count of your each paper can be easily added to your website
+This repo can be used to extract information from your Google Scholar and display them in your personal website.
 
-You can go to my publication page to see the effect 
+You can go to my web page to have a brief idea of it.
 
-http://huanlezhang.com/publications.php
+https://huanlezhang.com/publications.php
 
-## How to Use 
+## Configurations
 
-1. Move dtc-google-citation-helper folder to the home directory of your website
+In your web pages, make the following changes. Refer to the sample `testPage.php`.
 
-   If you want to move my folder to other places, you need to change `pathToDtcGoogleCitationHelperPhp` in `dtcGoogleCitationHelper.js` to point to `dtcGoogleCitationHelper.php` file. 
+1. jQuery is required. The version should be irrelevant. I am using 3.4.1
+```
+<script src=jquery-3.4.1.min.js></script>
+```
 
-2. In your php file, include my script by  
+2. Include `dtcGoogleScholarHelper.js` of this repo.
+```
+<script src="dtcGoogleScholarHelper.js"></script>
+```
 
-   `<script src="dtc-google-citation-helper/dtcGoogleCitationHelper.js"></script>`
+3. Replace the URL to your Google Scholar.
+```
+<script>
+  dtcGoogleScholarHelper('https://scholar.google.com/citations?user=Xm4NYnsAAAAJ&hl=en');
+</script>
+```
 
-   Also make sure you have jQuery included before my script, mine is using 
+In `dtcGoogleScholarHelper.js`, you only need to change `path_dtcGoogleScholarHelperPhp` variable to the path of the `dtcGoogleScholarHelper.php`.
 
-   ​	`<script src="js/jquery-3.2.1.js"></script>`
+Note: install SSL if `testPage.php` does not work.
 
-   The jQuery version does not matter
+## Interfaces
 
-3. Replace the URL to your Google Scholar URL. Put following code just before the `</body>` ending tag
+`.innerText` is changed according to the class name.
 
-   ```
-   <script>
-   	dtcGoogleCitationCount('your Google Scholar URL here');
-   </script>
-   ```
+* `dtcGoogleCitationsAll`: total citation counts
+* `dtcGoogleCitationsRecent`: total citations counts in recent 5 years
+* `dtcGoogleHIndexAll`: h-index of all citations
+* `dtcGoogleHIndexRecent`: h-index of citations in recent 5 years
+* `dtcGoogleI10IndexAll`: i10-index of all citations
+* `dtcGoogleI10IndexRecent`: i10-index of citations in recent 5 years
 
-4. Add some classes for your paper titles and counts. For your paper title, add class `dtcGooglePaperTitle`, and the place you want to show the citation, add class `dtcGoogleCitationCount`. That's all, see the example below.  Have fun.
+For each paper and its citation, you need to use two class names in pair.
+* `dtcGooglePaperTitle`: your paper title
+* `dtcGoogleCitationCount`: the place you want to show its citation count
 
-
-
-## Note
-
-* You need to check the paper title in your Google Scholar and the paper title in your website. I have made paper titles into lowercase alphabetical only. For example, if your paper title in Google Scholar is `Hi, I am an awesome paper`, it converts into `hiiamanawesomepaper`. On your website, your paper will get matched no matter it is `hi, I AM AN aweSOME PAper`, or `HI?    Iam an awesome paper?`. You know what I mean :)
-
-## Example
-
-Let's say you have a paper titled "This is an awesome paper" with citation count of 9 on your Google Scholar
-
-In your website php file, 
-
-​	``` <tag1 class="dtcGooglePaperTitle"> ThiS IS aN awesOME PAPER </tag1> ```
-
-and somewhere  you want to show the citation count for the paper
-
-​	```<tag2 class="dtcGoogleCitationCount"> </tag2>```
-
-`tag1` and `tag2` can be any HTML tags, such as `div`, `p`, `span`, etc.  That's all you need to do. The text (i.e., `innerText`) of the `tag2` will change to 9
+You need to check the paper title in your Google Scholar and the paper title in your website. I have made paper titles into lowercase alphabetical only. For example, if your paper title in Google Scholar is `Hi, I am an awesome paper`, it converts into `hiiamanawesomepaper`. On your website, your paper will get matched no matter it is `hi, I AM AN aweSOME PAper`, or `HI?    Iam an awesome paper?`. You know what I mean :)
