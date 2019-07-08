@@ -5,12 +5,12 @@
 	www.huanlezhang.com
 
 	Configuration:
-		path_dtcGoogleScholarHelperPhp: path to the PHP file
+		pathToDtcGoogleScholarHelperPhp: path to the PHP file
 */
 
 var dtcGoogleScholarVariables = {
 	// change it
-	path_dtcGoogleScholarHelperPhp: 'dtcGoogleScholarHelper.php',
+	pathToDtcGoogleScholarHelperPhp: "dtcGoogleScholarHelper.php",
 
 	citationsAllClass: "dtcGoogleCitationsAll",
 	citationsRecentClass: "dtcGoogleCitionsRecent",
@@ -28,11 +28,11 @@ function dtcGoogleScholarHelper(scholarUrl){
 
 	$.ajax({
 		type: "POST",
-		url: dtcGoogleScholarVariables['path_dtcGoogleScholarHelperPhp'],
-		data: 'scholarUrl=' + scholarUrl,
-		dataType: 'json',
+		url: dtcGoogleScholarVariables["pathToDtcGoogleScholarHelperPhp"],
+		data: "scholarUrl=" + scholarUrl,
+		dataType: "json",
 		cache: false,
-		success: function(data){
+		success(data){
 			// console.log(JSON.stringify(data));
 
 			var $citationsAll = $("." + dtcGoogleScholarVariables["citationsAllClass"]);
@@ -68,7 +68,7 @@ function dtcGoogleScholarHelper(scholarUrl){
 				var paperTitle = $paperTitles[i].innerText;
 
 				paperTitle = paperTitle.replace(/\W/g, "").toLowerCase();
-				if (data[paperTitle] != ''){
+				if (data[paperTitle] !== ''){
 					if (/\d/.test(data[paperTitle])){
 						$paperCitationCount[i].innerText = data[paperTitle];
 					} else {

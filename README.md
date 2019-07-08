@@ -17,23 +17,23 @@ You can go to my web page to have a brief idea of it.
 In your web pages, make the following changes. Refer to the sample `testPage.php`.
 
 1.  jQuery is required. The version should be irrelevant. I am using 3.4.1
-```javascript
+```xml
 <script src=jquery-3.4.1.min.js></script>
 ```
 
 2.  Include `dtcGoogleScholarHelper.js` of this repo.
-```javascript
+```xml
 <script src="dtcGoogleScholarHelper.js"></script>
 ```
 
 3.  Replace the URL to your Google Scholar.
-```javascript
+```xml
 <script>
   dtcGoogleScholarHelper('https://scholar.google.com/citations?user=Xm4NYnsAAAAJ&hl=en');
 </script>
 ```
 
-In `dtcGoogleScholarHelper.js`, you only need to change `path_dtcGoogleScholarHelperPhp` variable to the path of the `dtcGoogleScholarHelper.php`.
+In `dtcGoogleScholarHelper.js`, you only need to change `pathToDtcGoogleScholarHelperPhp` variable to the path of the `dtcGoogleScholarHelper.php`.
 
 Note: install SSL if `testPage.php` does not work.
 
