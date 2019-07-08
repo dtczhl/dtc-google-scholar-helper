@@ -12,9 +12,6 @@
 	header('Content-type: application/json');
 
 	$url = filter_input(INPUT_POST, "scholarUrl");
-	if ($url === NULL) {
-		exit("Error, scholarUrl is not set...");
-	}
 
 	$sepratorSymbols = array(
 		"citationsAllStartSymbol" => '<td class="gsc_rsb_std">',
