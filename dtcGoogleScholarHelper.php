@@ -11,7 +11,7 @@
 
 	header('Content-type: application/json');
 
-	if ( isset($_POST['scholarUrl'])){
+	if (isset($_POST['scholarUrl'])){
 		$url = $_POST['scholarUrl'];
 	} else {
 		die("Error, scholarUrl is not set...");
