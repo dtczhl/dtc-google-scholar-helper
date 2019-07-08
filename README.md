@@ -41,8 +41,10 @@ Note: install SSL if `testPage.php` does not work.
 
 As an example, if you copy this repository to the root folder of your website, you make the following changes.
 
-In `dtcGoogleScholarHelper.js`, `pathToDtcGoogleScholarHelperPhp: "dtc-google-scholar-helper/dtcGoogleScholarHelper.php"`
-
+In `dtcGoogleScholarHelper.js`
+```
+pathToDtcGoogleScholarHelperPhp: "dtc-google-scholar-helper/dtcGoogleScholarHelper.php"
+```
 
 
 ## Interfaces
