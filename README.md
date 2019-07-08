@@ -37,15 +37,14 @@ In `dtcGoogleScholarHelper.js`, you only need to change `pathToDtcGoogleScholarH
 
 Note: install SSL if `testPage.php` does not work.
 
-#### Example Configurations
+### Example Configurations
 
 As an example, if you copy this repository to the root folder of your website, you make the following changes.
 
 In `dtcGoogleScholarHelper.js`
-```
+```javascript
 pathToDtcGoogleScholarHelperPhp: "dtc-google-scholar-helper/dtcGoogleScholarHelper.php"
 ```
-
 
 ## Interfaces
 
