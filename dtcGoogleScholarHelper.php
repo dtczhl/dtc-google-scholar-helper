@@ -11,10 +11,9 @@
 
 	header('Content-type: application/json');
 
-	if (isset($_POST['scholarUrl'])){
-		$url = $_POST['scholarUrl'];
-	} else {
-		die("Error, scholarUrl is not set...");
+	$url = filter_input(INPUT_POST, "scholarUrl");
+	if ($url === NULL) {
+		exit("Error, scholarUrl is not set...");
 	}
 
 	$sepratorSymbols = array(
