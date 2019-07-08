@@ -68,11 +68,11 @@ function dtcGoogleScholarHelper(scholarUrl){
 				var paperTitle = $paperTitles[i].innerText;
 
 				paperTitle = paperTitle.replace(/\W/g, "").toLowerCase();
-				if (data[paperTitle] !== ''){
+				if (data[paperTitle] !== ""){
 					if (/\d/.test(data[paperTitle])){
 						$paperCitationCount[i].innerText = data[paperTitle];
 					} else {
-						$paperCitationCount[i].innerText = 'NA';
+						$paperCitationCount[i].innerText = "NA";
 					}
 				} else {
 					$paperCitationCount[i].innerText = "0";
