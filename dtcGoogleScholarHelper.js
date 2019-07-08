@@ -27,7 +27,7 @@ function dtcGoogleScholarHelper(scholarUrl){
 	// scholarUrl: URL to your Google Scholar
 
 	$.ajax({
-		type: 'POST',
+		type: "POST",
 		url: dtcGoogleScholarVariables['path_dtcGoogleScholarHelperPhp'],
 		data: 'scholarUrl=' + scholarUrl,
 		dataType: 'json',
@@ -36,27 +36,27 @@ function dtcGoogleScholarHelper(scholarUrl){
 			// console.log(JSON.stringify(data));
 
 			var $citationsAll = $("." + dtcGoogleScholarVariables["citationsAllClass"]);
-			if ($citationsAll.length != 0) {
+			if ($citationsAll.length !== 0) {
 				$citationsAll[0].innerText = data["citationsAll"];
 			}
 			var $citationsRecent = $("." + dtcGoogleScholarVariables["citationsRecentClass"]);
-			if ($citationsRecent.length != 0) {
+			if ($citationsRecent.length !== 0) {
 				$citationsRecent[0].innerText = data["citationsRecent"];
 			}
 			var $hIndexAll = $("." + dtcGoogleScholarVariables["hIndexAllClass"]);
-			if ($hIndexAll.length != 0) {
+			if ($hIndexAll.length !== 0) {
 				$hIndexAll[0].innerText = data["hIndexAll"];
 			}
 			var $hIndexRecent = $("." + dtcGoogleScholarVariables["hIndexRecentClass"]);
-			if ($hIndexRecent.length != 0) {
+			if ($hIndexRecent.length !== 0) {
 				$hIndexRecent[0].innerText = data["hIndexRecent"];
 			}
 			var $i10IndexAll = $("." + dtcGoogleScholarVariables["i10IndexAllClass"]);
-			if ($i10IndexAll.length != 0) {
+			if ($i10IndexAll.length !== 0) {
 				$i10IndexAll[0].innerText = data["i10IndexAll"];
 			}
 			var $i10IndexRecent = $("." + dtcGoogleScholarVariables["i10IndexRecentClass"]);
-			if ($i10IndexRecent.length != 0) {
+			if ($i10IndexRecent.length !== 0) {
 				$i10IndexRecent[0].innerText = data["i10IndexRecent"];
 			}
 
@@ -67,7 +67,7 @@ function dtcGoogleScholarHelper(scholarUrl){
 			for (var i = 0; i < $paperTitles.length; i++){
 				var paperTitle = $paperTitles[i].innerText;
 
-				paperTitle = paperTitle.replace(/\W/g, '').toLowerCase();
+				paperTitle = paperTitle.replace(/\W/g, "").toLowerCase();
 				if (data[paperTitle] != ''){
 					if (/\d/.test(data[paperTitle])){
 						$paperCitationCount[i].innerText = data[paperTitle];

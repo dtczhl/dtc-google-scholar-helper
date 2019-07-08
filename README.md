@@ -10,24 +10,24 @@ This repo can be used to extract information from your Google Scholar and displa
 
 You can go to my web page to have a brief idea of it.
 
-https://huanlezhang.com/publications.php
+<https://huanlezhang.com/publications.php>
 
 ## Configurations
 
 In your web pages, make the following changes. Refer to the sample `testPage.php`.
 
-1.    jQuery is required. The version should be irrelevant. I am using 3.4.1
-```
+1.  jQuery is required. The version should be irrelevant. I am using 3.4.1
+```javascript
 <script src=jquery-3.4.1.min.js></script>
 ```
 
-2.    Include `dtcGoogleScholarHelper.js` of this repo.
-```
+2.  Include `dtcGoogleScholarHelper.js` of this repo.
+```javascript
 <script src="dtcGoogleScholarHelper.js"></script>
 ```
 
-3.    Replace the URL to your Google Scholar.
-```
+3.  Replace the URL to your Google Scholar.
+```javascript
 <script>
   dtcGoogleScholarHelper('https://scholar.google.com/citations?user=Xm4NYnsAAAAJ&hl=en');
 </script>
