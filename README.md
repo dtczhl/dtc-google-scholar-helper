@@ -62,3 +62,7 @@ For each paper and its citation, you need to use two class names in pair.
 *   `dtcGoogleCitationCount`: the place you want to show its citation count
 
 You need to check the paper title in your Google Scholar and the paper title in your website. I have made paper titles into lowercase alphabetical only. For example, if your paper title in Google Scholar is `Hi, I am an awesome paper`, it converts into `hiiamanawesomepaper`. On your website, your paper will get matched no matter it is `hi, I AM AN aweSOME PAper`, or `HI?    Iam an awesome paper?`. You know what I mean :)
+
+## Limitations
+
+*   Google Scholar only shows up to 20 articles in the homepage. There is a **Show More** button if your number of articles is more than 20. My current code can only extract the articles in the homepage. 
