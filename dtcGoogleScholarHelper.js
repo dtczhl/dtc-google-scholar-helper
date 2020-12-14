@@ -11,6 +11,7 @@
 var dtcGoogleScholarVariables = {
 	// change it
 	pathToDtcGoogleScholarHelperPhp: "dtcGoogleScholarHelper.php",
+	// pathToDtcGoogleScholarHelperPhp: "dtc-google-scholar-helper/dtcGoogleScholarHelper.php",
 
 	citationsAllClass: "dtcGoogleCitationsAll",
 	citationsRecentClass: "dtcGoogleCitionsRecent",
@@ -78,6 +79,23 @@ function dtcGoogleScholarHelper(scholarUrl){
 					$paperCitationCount[i].innerText = "0";
 				}
 			}
+
+			// Ignore it. Just for my website only
+			format_publications();
 		}
 	});
 }
+
+// Ignore below. Just for my personal webiste
+function format_publications(){
+
+	var dtcGoogleCitationCountClass = $(".dtcGoogleCitationCount");
+	jQuery.each(dtcGoogleCitationCountClass, function(){
+
+		if ($(this)[0].innerText == "NA") {
+			$(this).first().closest("li").addClass("publication_count_na");
+		} else {
+			$(this).first().closest("li").addClass("publication_count_valid");
+		}
+	});
+};
