@@ -2,6 +2,8 @@
 
 Try `testPage.php` first. It should run out of the box.
 
+Note: install SSL if `testPage.php` does not work.
+
 
 ## Configurations
 

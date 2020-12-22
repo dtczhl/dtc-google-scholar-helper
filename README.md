@@ -40,5 +40,3 @@ For each paper and its citation, you need to use two class names in pair.
 *   `dtcGoogleCitationCount`: the place you want to show its citation count
 
 You need to check the paper title in your Google Scholar and the paper title in your website. I have made paper titles into lowercase alphabetical only. For example, if your paper title in Google Scholar is `Hi, I am an awesome paper`, it converts into `hiiamanawesomepaper`. On your website, your paper will get matched no matter it is `hi, I AM AN aweSOME PAper`, or `HI?    Iam an awesome paper?`. You know what I mean :)
-
-Note: install SSL if `testPage.php` does not work.
