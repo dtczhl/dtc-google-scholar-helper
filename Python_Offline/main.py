@@ -13,6 +13,9 @@ import re
 # url to your Google Scholar
 google_scholar_url = "https://scholar.google.com/citations?user=Xm4NYnsAAAAJ&hl=en&oi=ao"
 
+# ChromeDriver path
+chrome_driver_path = "./chromedriver"
+
 """ --- End of Configurations ---"""
 
 show_more_button_text_indicator = "//button[@id='gsc_bpf_more']"
@@ -29,7 +32,7 @@ timeout_more = 5
 option = webdriver.ChromeOptions()
 option.add_argument(" - incognito")
 
-browser = webdriver.Chrome("./chromedriver", options=option)
+browser = webdriver.Chrome(chrome_driver_path, options=option)
 browser.get(google_scholar_url)
 
 try:
@@ -52,7 +55,7 @@ citation_statistics = [x.text for x in citation_statistics_elements]
 title_elements = browser.find_elements_by_xpath(title_indicator)
 # find citations
 citation_elements = browser.find_elements_by_xpath(citation_indicator)
-titles = [re.sub(r"\s+", "", x.text, flags=re.UNICODE).lower() for x in title_elements]
+titles = [re.sub(r"\W+", "", x.text, flags=re.UNICODE).lower() for x in title_elements]
 citations = [x.text if len(x.text) >= 1 else 0 for x in citation_elements]
 
 # format output

@@ -1,17 +1,20 @@
 /*
-	A helper to display your Google Scholar profile to your website
+  Display Google Scholar profile to your website
 
-	Huanle Zhang at UC Davis
-	www.huanlezhang.com
+  Huanle Zhang at UC Davis
+  www.huanlezhang.com
 
-	Configuration:
-		pathToDtcGoogleScholarHelperPhp: path to the PHP file
+  Configuration:
+    pathToGoogleScholarCitationTxt: pth to the google_scholar_citation text file. 
+    
+
 */
 
 var dtcGoogleScholarVariables = {
-	// change it
-	pathToDtcGoogleScholarHelperPhp: "dtcGoogleScholarHelper.php",
-	// pathToDtcGoogleScholarHelperPhp: "dtc-google-scholar-helper/Php_Standalone/dtcGoogleScholarHelper.php",
+
+    // change it !!
+	pathToGoogleScholarCitationTxt: "google_scholar_citation.txt",
+	// pathToGoogleScholarCitationTxt: "dtc-google-scholar-helper/Python_Offline/google_scholar_citation.txt",
 
 	citationsAllClass: "dtcGoogleCitationsAll",
 	citationsRecentClass: "dtcGoogleCitionsRecent",
@@ -24,19 +27,31 @@ var dtcGoogleScholarVariables = {
 	paperCitationCountClass: "dtcGoogleCitationCount"
 };
 
-function dtcGoogleScholarHelper(scholarUrl){
-	// scholarUrl: URL to your Google Scholar
+
+function dtcGoogleScholarHelper(){
 
 	$.ajax({
-		type: "POST",
-		url: dtcGoogleScholarVariables["pathToDtcGoogleScholarHelperPhp"],
-		data: "scholarUrl=" + scholarUrl,
-		dataType: "json",
-		cache: false,
-		success(data){
-			// console.log(JSON.stringify(data));
+		url : dtcGoogleScholarVariables["pathToGoogleScholarCitationTxt"],
+		dataType : "text",
+		success : function (t) {
 
-			var $citationsAll = $("." + dtcGoogleScholarVariables["citationsAllClass"]);
+				var lines = t.split('\n');
+
+				var data = {};
+				data["citationsAll"] = lines[0];
+				data["citationsRecent"] = lines[1];
+				data["hIndexAll"] = lines[2];
+				data["hIndexRecent"] = lines[3];
+				data["i10IndexAll"] = lines[4];
+				data["i10IndexRecent"] = lines[5];
+
+				var index = 6;
+				while (index < lines.length) {
+					data[lines[index]] = lines[index+1];
+					index = index + 2;
+				}
+
+				var $citationsAll = $("." + dtcGoogleScholarVariables["citationsAllClass"]);
 			if ($citationsAll.length !== 0) {
 				$citationsAll[0].innerText = data["citationsAll"];
 			}
@@ -81,4 +96,5 @@ function dtcGoogleScholarHelper(scholarUrl){
 			}
 		}
 	});
+
 }
