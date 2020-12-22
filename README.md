@@ -17,7 +17,7 @@ There are two versions.
 
 *   Standalone mode (`Php_Standalone` directory). It is written purely in PHP and Javascript, which means that your website can show the **real-time** Google Scholar citation information. In addition, it is easy to use, just copy to your web server and configure the URL of your Google Scholar. However, it can only display up to 20 articles, as Google Scholar hides the remaining.
 
-    <img src="img/show_more.png" width="200" alt="show more" />
+    <img src="img/show_more.png" width="400" alt="show more" />
 
 *   Offline mode (`Python_Offline` directory). In which I write a Python program to extract all citation information from Google Scholar. The Python script generate a text file with all your citation information. Then, you can upload the text file along with a Javascript file to you web server. The advantage is that you can have all your citations. The bad thing is that you need to upload the citation text file to your server by yourself (Of course, you can make an automatic tool to upload the file to your server).
 
