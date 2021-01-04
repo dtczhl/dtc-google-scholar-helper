@@ -30,7 +30,9 @@ timeout = 20
 timeout_more = 5
 
 option = webdriver.ChromeOptions()
-option.add_argument(" - incognito")
+# option.add_argument(" - incognito")
+option.add_argument('headless')
+option.add_argument('window-size=1920x1080')
 
 browser = webdriver.Chrome(chrome_driver_path, options=option)
 browser.get(google_scholar_url)
@@ -62,8 +64,8 @@ citations = [x.text if len(x.text) >= 1 else 0 for x in citation_elements]
 file_output_string = "".join([x+"\n" for x in citation_statistics])
 file_output_string = file_output_string + "".join(x + "\n" + str(y) + "\n" for x, y in zip(titles, citations))
 file_output_string = file_output_string.strip()
-print(file_output_string)
-print("Total articles = ", len(titles))
+# print(file_output_string)
+# print("Total articles = ", len(titles))
 
 with open("google_scholar_citation.txt", "w") as f_out:
     f_out.write(file_output_string)

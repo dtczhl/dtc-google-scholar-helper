@@ -19,7 +19,7 @@ There are two versions.
 
     <img src="img/show_more.png" width="400" alt="show more" />
 
-*   Offline mode (`Python_Offline` directory). In which I write a Python program to extract all citation information from Google Scholar. The Python script generate a text file with all your citation information. Then, you can upload the text file along with a Javascript file to you web server. The advantage is that you can have all your citations. The bad thing is that you need to upload the citation text file to your server by yourself (Of course, you can make an automatic tool to upload the file to your server).
+*   Offline mode (`Python_Offline` directory). In which I write a Python program to extract all citation information from Google Scholar. The Python script generate a text file with all your citation information. Then, you can upload the text file along with a Javascript file to you web server. The advantage is that you can have all your citations. The bad thing is that you need somehow to upload the citation text file to your server. It is not difficult though. I have made a script to do that at my PC startup. 
 
 
 ## Interfaces
