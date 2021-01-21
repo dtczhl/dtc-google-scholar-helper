@@ -15,11 +15,11 @@ You can go to my web page to have a brief idea of it.
 
 There are two versions.
 
-*   Standalone mode (`Php_Standalone` directory). It is written purely in PHP and Javascript, which means that your website can show the **real-time** Google Scholar citation information. In addition, it is easy to use, just copy to your web server and configure the URL of your Google Scholar. However, it can only display up to 20 articles, as Google Scholar hides the remaining.
+*   Standalone mode (`Php_Standalone` directory, **No longer maintained**). It is written purely in PHP and Javascript, which means that your website can show the **real-time** Google Scholar citation information. In addition, it is easy to use, just copy to your web server and configure the URL of your Google Scholar. However, it can only display up to 20 articles, as Google Scholar hides the remaining.
 
     <img src="img/show_more.png" width="400" alt="show more" />
 
-*   Offline mode (`Python_Offline` directory). In which I write a Python program to extract all citation information from Google Scholar. The Python script generate a text file with all your citation information. Then, you can upload the text file along with a Javascript file to you web server. The advantage is that you can have all your citations. The bad thing is that you need somehow to upload the citation text file to your server. It is not difficult though. I have made a script to do that at my PC startup. 
+*   Offline mode (`Python_Offline` directory). In which I write a Python program to extract all citation information from Google Scholar. The Python script generate a text file with all your citation information. Then, you can upload the text file along with a Javascript file to you web server. The advantage is that you can have all your citations. The bad thing is that you need somehow to upload the citation text file to your server. It is not difficult though. I have made a script to do that at my PC startup.
 
 
 ## Interfaces
@@ -28,6 +28,7 @@ Both versions have same interfaces for your web pages.
 
 `.innerText` is changed according to the class name.
 
+*   `dtcGoogleUpdateTime`: update time (Python_Offline only)
 *   `dtcGoogleCitationsAll`: total citation counts
 *   `dtcGoogleCitationsRecent`: total citations counts in recent 5 years
 *   `dtcGoogleHIndexAll`: h-index of all citations

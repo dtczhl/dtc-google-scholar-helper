@@ -11,6 +11,7 @@
   <body>
     <!-- Demo -->
 
+    <p> Update Time: <span class="dtcGoogleUpdateTime"> -0 </span> </p>
     <p> Citaions all: <span class="dtcGoogleCitationsAll"> -0 </span> </p>
     <p> Citaions recent: <span class="dtcGoogleCitionsRecent"> -0 </span> </p>
     <p> h-index all: <span class="dtcGoogleHIndexAll"> -0 </span> </p>

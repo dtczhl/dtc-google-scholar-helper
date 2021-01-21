@@ -78,9 +78,11 @@ It is much better if we can upload the updated citation file to our web sever au
     bash tool.sh
     ```
 
-4.  Run the `tool.sh` at PC startup. One easy way is to use the Startup Applications GUI. The **Command** is `bash path_to_tool.sh`.
+4.  Run the `tool.sh` at PC startup. Add the following to the end of `~/.bashrc` file
 
-    <img src="../img/startup_gui.png" width="400" alt="show more" />
+    ```shell
+    bash {path_to_tool}.sh
+    ```
 
 
 ### Reference
