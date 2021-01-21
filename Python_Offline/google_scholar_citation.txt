@@ -1,3 +1,4 @@
+2021-01-20 23:26:05
 174
 171
 5
@@ -5,7 +6,7 @@
 3
 3
 whenpipelinesmeetfountainfastdatadisseminationinwirelesssensornetworks
-90
+89
 dopencacousticbasedencounterprofilingusingsmartphones
 37
 pandofountainenabledfastdatadisseminationwithconstructiveinterference
@@ -28,9 +29,9 @@ ofdmafemtocellgatewayschedulingbasedoncoloring
 1
 optimaltransmissiondistanceofmeanprogressandmeantransportindevicetodevicenetworks
 1
-towardmobile3dvision
-0
 towardslearningautomationiotattackdetectionthroughreinforcementlearning
+1
+earlymobilityactivityrecognitionforintensivecareunitpatientsusingaccelerometers
 0
 slimmeraccelerating3dsemanticsegmentationformobileaugmentedreality
 0
@@ -45,4 +46,6 @@ aideaugmentedonboardingofiotdevicesatease
 atractableframeworkforpowerconsumptioninfemtocellnetworks
 0
 policyondownlinkaccessoffemtocellbasedonofdmaindenseemploymentresidentialenvironment
+0
+towardmobile3dvision
 0

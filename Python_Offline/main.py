@@ -7,6 +7,8 @@ from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
 import time
 import re
+import datetime
+
 
 """ ------ Configurations ------ """
 
@@ -61,7 +63,10 @@ titles = [re.sub(r"\W+", "", x.text, flags=re.UNICODE).lower() for x in title_el
 citations = [x.text if len(x.text) >= 1 else 0 for x in citation_elements]
 
 # format output
-file_output_string = "".join([x+"\n" for x in citation_statistics])
+now = datetime.datetime.now()
+# print(now.strftime("%Y-%m-%d %H:%M:%S"))
+file_output_string = now.strftime("%Y-%m-%d %H:%M:%S") + "\n"
+file_output_string = file_output_string + "".join([x+"\n" for x in citation_statistics])
 file_output_string = file_output_string + "".join(x + "\n" + str(y) + "\n" for x, y in zip(titles, citations))
 file_output_string = file_output_string.strip()
 # print(file_output_string)
