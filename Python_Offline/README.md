@@ -72,16 +72,16 @@ It is much better if we can upload the updated citation file to our web sever au
     scp -i /path/to/.ssh/id_rsa local_file remote_username@server_ip_address:[destination]
     ```
 
-4.  Test if the `tool.sh` can successfully run your Python code and upload citation file to your server.
+4.  Test if the `tool.sh` can successfully run your Python code and upload citation file to your server. Note: I am using Anaconda for Python
 
     ```shell
     bash tool.sh
     ```
 
-4.  Run the `tool.sh` at PC startup. Add the following to the end of `~/.bashrc` file
+4.  Run the `tool.sh` at PC startup. `crontab -e`
 
     ```shell
-    bash {path_to_tool}.sh
+    @reboot sleep 60 && {path_to_the_tool}.sh
     ```
 
 
