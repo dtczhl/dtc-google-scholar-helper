@@ -1,6 +1,12 @@
 #!/bin/bash
 
 
+# path to this git
+path_to_git=/var/www/html/dtc-personal-website/dtc-google-scholar-helper
+# change your vitual environemnt name
+conda_env_name=google_scholar_helper
+
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
  __conda_setup="$('/home/dtc/Software/Anaconda/bin/conda' 'shell.bash' 'hook'     2> /dev/null)"
@@ -17,11 +23,9 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 
-path_to_git=/var/www/html/dtc-personal-website/dtc-google-scholar-helper
-
 (
 cd ${path_to_git}/Python_Offline
-conda activate Python_Offline && python main.py
+conda activate ${conda_env_name} && python main.py
 scp -i /home/dtc/.ssh/id_rsa google_scholar_citation.txt dtczhl@www.huanlezhang.com:./public_html/dtc-google-scholar-helper/Python_Offline/
 )
 

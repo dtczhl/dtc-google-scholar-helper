@@ -75,8 +75,14 @@ It is much better if we can upload the updated citation file to our web sever au
 4.  Test if the `tool.sh` can successfully run your Python code and upload citation file to your server. Note: I am using Anaconda for Python
 
     ```shell
-    bash tool.sh
+    # path to this git
+    path_to_git=
+    # change your vitual environemnt name
+    conda_env_name=
+
     ```
+
+    and run `bash tool.sh`
 
 4.  Run the `tool.sh` at PC startup. `crontab -e`
 
