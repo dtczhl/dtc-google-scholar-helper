@@ -13,8 +13,8 @@
 var dtcGoogleScholarVariables = {
 
     // change it !!
-	pathToGoogleScholarCitationTxt: "google_scholar_citation.txt",
-	// pathToGoogleScholarCitationTxt: "dtc-google-scholar-helper/Python_Offline/google_scholar_citation.txt",
+	// pathToGoogleScholarCitationTxt: "google_scholar_citation.txt",
+	pathToGoogleScholarCitationTxt: "dtc-google-scholar-helper/Python_Offline/google_scholar_citation.txt",
 
     updateTimeClass: "dtcGoogleUpdateTime",
 

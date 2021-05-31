@@ -6,14 +6,14 @@ Note: install SSL if `testPage.php` does not work.
 
 ## Configurations
 
-1.  Configure Python envioronment to run `main.py`. You need to install `selenium` package, and download `ChromeDriver` <https://sites.google.com/a/chromium.org/chromedriver/downloads>.
+1.  Configure Python envioronment to run `main.py`. You need to install `selenium` package, and download `ChromeDriver` to the `chromedriver` folder <https://sites.google.com/a/chromium.org/chromedriver/downloads>. You can easily find your Chrome's ChromeDriver by looking at the error message.
 
 2.  In `main.py`, replace `google_scholar_url` to your Google Scholar and `chrome_driver_path` to the downloaded ChromeDriver. After successfully run it, a `google_scholar_citation.txt` file is generated
     ```python
     # url to your Google Scholar
     google_scholar_url = "https://scholar.google.com/citations?user=Xm4NYnsAAAAJ&hl=en&oi=ao"
     # ChromeDriver path
-    chrome_driver_path = "./chromedriver"
+    chrome_driver_path = "./chromedriver/chromedrive_91"
     ```
 
 3.  In your web page, add jQuery. The version should be irrelevant. I am using 3.4.1
