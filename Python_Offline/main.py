@@ -16,7 +16,7 @@ import datetime
 google_scholar_url = "https://scholar.google.com/citations?user=Xm4NYnsAAAAJ&hl=en&oi=ao"
 
 # ChromeDriver path
-chrome_driver_path = "./chromedriver/chromedriver_91"
+chrome_driver_path = "./chromedriver/chromedriver_93"
 
 """ --- End of Configurations ---"""
 
